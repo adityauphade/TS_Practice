@@ -16,10 +16,9 @@ function generateShift(): string{
             return "error"
     }
 }
+// console.log(generateShift())
 
-generateShift()
-
-//interface
+//interface - object
 interface Car{
     pid: number
     company: string,
@@ -27,11 +26,35 @@ interface Car{
     released: boolean
 }
 
-let ciaz: Car = {
+let Ciaz: Car = {
     pid: 1,
     company: "Maruti",
     type: "Sedan",
     released: true,
 }
+let Alto: Car = {
+    pid: 2,
+    company: "Maruti",
+    type: "Hatchback",
+    released: true,
+}
 
-console.log(ciaz)
+// console.log(Alto)
+
+//interface - function
+interface mathModel{
+    (x: number, y: number): number
+}
+
+
+const add: mathModel = (x, y) => {return x+y;}      //arrow function
+// console.log(add(5, 10))
+
+function add2(x: number, y: number): number{        //normal function w/o interface
+    return x+y;                                     //normal function w interface cant be done
+}
+// console.log(add2(1, 2))
+
+
+//classes
+

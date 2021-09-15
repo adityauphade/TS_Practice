@@ -14,11 +14,22 @@ function generateShift() {
             return "error";
     }
 }
-generateShift();
-var ciaz = {
+var Ciaz = {
     pid: 1,
     company: "Maruti",
     type: "Sedan",
     released: true
 };
-console.log(ciaz);
+var Alto = {
+    pid: 2,
+    company: "Maruti",
+    type: "Hatchback",
+    released: true
+};
+var add = function (x, y) { return x + y; }; //arrow function
+// console.log(add(5, 10))
+function add2(x, y) {
+    return x + y; //normal function w interface cant be done
+}
+// console.log(add2(1, 2))
+//classes
