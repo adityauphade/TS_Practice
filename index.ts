@@ -81,8 +81,8 @@ class Person implements personModel{
 }
 
 let person1 = new Person(420, "Bhaaya", true)       //subclass
-console.log(person1)
-console.log(person1.register())
+// console.log(person1)
+// console.log(person1.register())
 
 class Student extends Person{
     school: string
@@ -97,6 +97,24 @@ class Student extends Person{
 }
 
 let student1 = new Student(420, "Ramya", true, "BridgeLabz")
-console.log(student1)
-console.log(student1.caught())
-console.log(student1.register())
+// console.log(student1)
+// console.log(student1.caught())
+// console.log(student1.register())
+
+
+//generic
+
+function getArray<type>(items: type[]): type[]{
+    return new Array().concat(items)
+}
+
+const numArray = getArray<number>([1, 2, 3, 4])
+const strArray = getArray<string>(['Ram', "Shyam", "Papya", "Ganya"])
+
+numArray.push(3)
+numArray.push('hella')      //error
+strArray.push(3)            //error
+strArray.push('Hella')
+
+console.log(numArray)
+console.log(strArray)

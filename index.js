@@ -58,8 +58,8 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var person1 = new Person(420, "Bhaaya", true); //subclass
-console.log(person1);
-console.log(person1.register());
+// console.log(person1)
+// console.log(person1.register())
 var Student = /** @class */ (function (_super) {
     __extends(Student, _super);
     function Student(id, name, isBruh, school) {
@@ -73,6 +73,18 @@ var Student = /** @class */ (function (_super) {
     return Student;
 }(Person));
 var student1 = new Student(420, "Ramya", true, "BridgeLabz");
-console.log(student1);
-console.log(student1.caught());
-console.log(student1.register());
+// console.log(student1)
+// console.log(student1.caught())
+// console.log(student1.register())
+//generic
+function getArray(items) {
+    return new Array().concat(items);
+}
+var numArray = getArray([1, 2, 3, 4]);
+var strArray = getArray(['Ram', "Shyam", "Papya", "Ganya"]);
+numArray.push(3);
+numArray.push('hella'); //error
+strArray.push(3); //error
+strArray.push('Hella');
+console.log(numArray);
+console.log(strArray);
