@@ -31,5 +31,17 @@ var add = function (x, y) { return x + y; }; //arrow function
 function add2(x, y) {
     return x + y; //normal function w interface cant be done
 }
-// console.log(add2(1, 2))
-//classes
+var Person = /** @class */ (function () {
+    function Person(id, name, isBruh) {
+        this.id = id;
+        this.name = name;
+        this.isBruh = isBruh;
+    }
+    Person.prototype.register = function () {
+        return this.name + " has been registered";
+    };
+    return Person;
+}());
+var Bhaya = new Person(420, "BhayaBoii", true);
+console.log(Bhaya);
+console.log(Bhaya.register());

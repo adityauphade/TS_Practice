@@ -57,4 +57,29 @@ function add2(x: number, y: number): number{        //normal function w/o interf
 
 
 //classes
+interface personModel{
+    id: number
+    name: string
+    isBruh: boolean
+    register(): string
+}
 
+class Person implements personModel{
+    id
+    name
+    isBruh
+
+    constructor(id: number, name: string, isBruh: boolean){
+        this.id = id
+        this.name = name
+        this.isBruh = isBruh
+    }
+
+    register(){
+        return `${this.name} has been registered`
+    }
+}
+
+let Bhaya = new Person(420, "BhayaBoii", true)
+console.log(Bhaya)
+console.log(Bhaya.register())
