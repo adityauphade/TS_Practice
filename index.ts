@@ -80,6 +80,23 @@ class Person implements personModel{
     }
 }
 
-let Bhaya = new Person(420, "BhayaBoii", true)
-console.log(Bhaya)
-console.log(Bhaya.register())
+let person1 = new Person(420, "Bhaaya", true)       //subclass
+console.log(person1)
+console.log(person1.register())
+
+class Student extends Person{
+    school: string
+    constructor(id: number, name: string, isBruh: boolean, school: string){
+        super(id, name, isBruh)
+        this.school = school
+    }
+
+    caught(){
+        return `${this.name} is caught studying too much for ${this.school}`
+    }
+}
+
+let student1 = new Student(420, "Ramya", true, "BridgeLabz")
+console.log(student1)
+console.log(student1.caught())
+console.log(student1.register())

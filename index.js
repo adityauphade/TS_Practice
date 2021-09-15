@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var fullTime = 8;
 var partTime = 4;
 var hourlyWage = 20;
@@ -42,6 +57,22 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var Bhaya = new Person(420, "BhayaBoii", true);
-console.log(Bhaya);
-console.log(Bhaya.register());
+var person1 = new Person(420, "Bhaaya", true); //subclass
+console.log(person1);
+console.log(person1.register());
+var Student = /** @class */ (function (_super) {
+    __extends(Student, _super);
+    function Student(id, name, isBruh, school) {
+        var _this = _super.call(this, id, name, isBruh) || this;
+        _this.school = school;
+        return _this;
+    }
+    Student.prototype.caught = function () {
+        return this.name + " is caught studying too much for " + this.school;
+    };
+    return Student;
+}(Person));
+var student1 = new Student(420, "Ramya", true, "BridgeLabz");
+console.log(student1);
+console.log(student1.caught());
+console.log(student1.register());
