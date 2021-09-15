@@ -1,9 +1,8 @@
-"use strict";
-let fullTime = 8;
-let partTime = 4;
-let hourlyWage = 20;
+var fullTime = 8;
+var partTime = 4;
+var hourlyWage = 20;
 function generateShift() {
-    let shift = Math.floor(Math.random() * 10 % 3);
+    var shift = Math.floor(Math.random() * 10 % 3);
     switch (shift) {
         case 0:
             return "Fulltime Shift";
@@ -16,3 +15,10 @@ function generateShift() {
     }
 }
 generateShift();
+var ciaz = {
+    pid: 1,
+    company: "Maruti",
+    type: "Sedan",
+    released: true
+};
+console.log(ciaz);
